@@ -26,15 +26,12 @@ RUN pip install --no-cache-dir --upgrade pip && \
 # Copiar código-fonte da aplicação
 COPY . .
 
-# Garantir permissão de execução do entrypoint e conversão de finais de linha
-RUN chmod +x entrypoint.sh
-
 # Expor a porta do Dashboard Streamlit
 EXPOSE 8501
 
 # Healthcheck do Streamlit
-HEALTHCHECK --interval=30s --timeout=10s --start-period=10s --retries=3 \
+HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
     CMD curl --fail http://localhost:8501/_stcore/health || exit 1
 
 # Comando de entrada
-ENTRYPOINT ["/bin/bash", "/app/entrypoint.sh"]
+CMD ["python", "run_app.py"]
