@@ -1,0 +1,35 @@
+{
+  "telegram_id": 772345678,
+  "nome": "Bruno Sanches",
+  "ultima_atualizacao": "2026-09-05T13:20:00",
+  "mensagens": [
+    {
+      "autor": "Bruno",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 13:00:00",
+      "conteudo": "Olá! Vi um apartamento com varanda gourmet na Vila Madalena, gostaria de agendar uma visita."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 13:00:08",
+      "conteudo": "Olá Bruno! Seja muito bem-vindo à Imobiliária Prime. É o Apartamento na Vila Madalena (IMO-008), uma unidade espetacular com 3 quartos e vista para a copa das árvores. Qual o melhor dia para visitarmos?"
+    },
+    {
+      "autor": "Bruno",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 13:10:00",
+      "conteudo": "Quarta-feira dia 09/09 por volta das 16h seria ótimo."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 13:15:00",
+      "conteudo": "Perfeito, Bruno! Visita confirmada para quarta-feira, 09/09 às 16:00 com nosso especialista Roberto Prado. Ele estará no local para apresentar o condomínio e tirar todas as suas dúvidas."
+    }
+  ]
+}

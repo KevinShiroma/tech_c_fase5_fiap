@@ -1,0 +1,12 @@
+services:
+  sdr-app:
+    build: .
+    container_name: sdr-imobiliario-app
+    ports:
+      - "8501:8501"
+    env_file:
+      - .env
+    volumes:
+      - ./data:/app/data
+      - ./conversas:/app/conversas
+    restart: unless-stopped

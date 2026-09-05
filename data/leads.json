@@ -1,0 +1,308 @@
+[
+  {
+    "lead_id": "LEAD-6166764483",
+    "telegram_id": 6166764483,
+    "nome": "Kevin",
+    "intencao": "aluguel",
+    "status": "qualificado",
+    "score_qualificacao": 90,
+    "criterios": {
+      "regiao": "Brooklin",
+      "quartos": 2,
+      "preco_max": 900000,
+      "urgencia": "flexível"
+    },
+    "imoveis_sugeridos": [
+      "IMO-006",
+      "IMO-009"
+    ],
+    "agendamento": {
+      "corretor_id": "CORR-02",
+      "corretor_nome": "Juliana Silveira",
+      "data_hora": "2026-09-10T11:00:00",
+      "tipo_visita": "Visita ao Apartamento Familiar no Brooklin"
+    },
+    "resumo_corretor": "Cliente Kevin manifestou interesse em investir em imóveis.",
+    "data_recebimento": "2026-09-05",
+    "ultima_interacao": "2026-09-05T19:08:14.136176",
+    "necessita_follow_up": false,
+    "status_followup": "Follow-up Enviado",
+    "data_ultimo_followup": "2026-09-05 17:22:39",
+    "tentativas_followup": 4,
+    "agente_responsavel": "Camila (Agente de Locação)"
+  },
+  {
+    "lead_id": "LEAD-991234567",
+    "telegram_id": 991234567,
+    "nome": "Larissa Fontana",
+    "intencao": "compra",
+    "status": "visita_agendada",
+    "score_qualificacao": 100,
+    "criterios": {
+      "tipo_imovel": "apartamento",
+      "regiao": "Zona Sul",
+      "bairros": [
+        "Moema",
+        "Campo Belo"
+      ],
+      "faixa_preco_max": 1300000,
+      "quartos": 3,
+      "urgencia": "Alta (quer fechar em 45 dias)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-001"
+    ],
+    "agendamento": {
+      "corretor_id": "CORR-02",
+      "corretor_nome": "Juliana Silveira",
+      "data_hora": "2026-09-09T10:30:00",
+      "tipo": "Visita Presencial ao Imóvel",
+      "imovel_id": "IMO-001",
+      "imovel_titulo": "Apartamento Moderno em Moema Pássaros (IMO-001)"
+    },
+    "resumo_corretor": "Família buscando apartamento de 3 dormitórios em Moema Pássaros ou Campo Belo até R$ 1.3M. Prioridade para varanda gourmet e condomínio com lazer de clube.",
+    "data_recebimento": "2026-09-05",
+    "ultima_interacao": "2026-09-05T11:45:00",
+    "necessita_follow_up": false
+  },
+  {
+    "lead_id": "LEAD-772345678",
+    "telegram_id": 772345678,
+    "nome": "Bruno Sanches",
+    "intencao": "compra",
+    "status": "visita_agendada",
+    "score_qualificacao": 95,
+    "criterios": {
+      "tipo_imovel": "apartamento",
+      "regiao": "Zona Oeste",
+      "bairros": [
+        "Vila Madalena",
+        "Pinheiros"
+      ],
+      "faixa_preco_max": 1500000,
+      "quartos": 3,
+      "urgencia": "Média (mudança prevista em 60 dias)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-008"
+    ],
+    "agendamento": {
+      "corretor_id": "CORR-03",
+      "corretor_nome": "Roberto Prado",
+      "data_hora": "2026-09-09T16:00:00",
+      "tipo": "Visita Presencial ao Imóvel",
+      "imovel_id": "IMO-008",
+      "imovel_titulo": "Apartamento com Varanda Gourmet na Vila Madalena (IMO-008)"
+    },
+    "resumo_corretor": "Cliente interessado em apartamento na Vila Madalena com vista livre e varanda integrada. Busca negociar condições de pagamento e avaliar vaga para 2 carros.",
+    "data_recebimento": "2026-09-05",
+    "ultima_interacao": "2026-09-05T13:20:00",
+    "necessita_follow_up": false
+  },
+  {
+    "lead_id": "LEAD-884567890",
+    "telegram_id": 884567890,
+    "nome": "Marcelo Oliveira",
+    "intencao": "investimento",
+    "status": "visita_agendada",
+    "score_qualificacao": 90,
+    "criterios": {
+      "tipo_imovel": "studio",
+      "regiao": "Zona Oeste",
+      "bairros": [
+        "Pinheiros",
+        "Vila Mariana"
+      ],
+      "ticket_investimento": 450000,
+      "urgencia": "Imediata (capital disponível para aporte)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-004",
+      "IMO-002"
+    ],
+    "agendamento": {
+      "corretor_id": "CORR-01",
+      "corretor_nome": "Carlos Mendes",
+      "data_hora": "2026-09-10T15:00:00",
+      "tipo": "Reunião de Consultoria de Rentabilidade (Short-stay)",
+      "imovel_id": "IMO-004",
+      "imovel_titulo": "Studio Compacto em Pinheiros para Investimento (IMO-004)"
+    },
+    "resumo_corretor": "Investidor com foco em studios para locação por temporada (Airbnb) com Yield projetado acima de 8.5% a.a. em Pinheiros ou Vila Mariana.",
+    "data_recebimento": "2026-09-05",
+    "ultima_interacao": "2026-09-05T12:30:00",
+    "necessita_follow_up": false
+  },
+  {
+    "lead_id": "LEAD-551234111",
+    "telegram_id": 551234111,
+    "nome": "Dr. Eduardo Paiva",
+    "intencao": "aluguel",
+    "status": "qualificado",
+    "score_qualificacao": 90,
+    "criterios": {
+      "tipo_imovel": "apartamento",
+      "regiao": "Centro",
+      "bairros": [
+        "Bela Vista",
+        "Consolação"
+      ],
+      "preco_max": 3600,
+      "quartos": 2,
+      "urgencia": "Urgente (mudar em 10 dias por início de residência médica)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-018",
+      "IMO-019"
+    ],
+    "resumo_corretor": "Médico residente transferido para SP. Busca apartamento mobiliado próximo à Paulista e complexo hospitalar Sírio/9 de Julho. Quer fechar locação digital com rapidez.",
+    "data_recebimento": "2026-09-04",
+    "ultima_interacao": "2026-09-04T18:10:00",
+    "necessita_follow_up": true
+  },
+  {
+    "lead_id": "LEAD-552345222",
+    "telegram_id": 552345222,
+    "nome": "Patrícia e Rodrigo Albuquerque",
+    "intencao": "compra",
+    "status": "visita_agendada",
+    "score_qualificacao": 95,
+    "criterios": {
+      "tipo_imovel": "casa",
+      "regiao": "Zona Sul",
+      "bairros": [
+        "Morumbi"
+      ],
+      "faixa_preco_max": 1900000,
+      "quartos": 3,
+      "urgencia": "Média (mudança para próximo semestre letivo)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-007"
+    ],
+    "agendamento": {
+      "corretor_id": "CORR-02",
+      "corretor_nome": "Juliana Silveira",
+      "data_hora": "2026-09-11T11:00:00",
+      "tipo": "Visita Presencial ao Imóvel",
+      "imovel_id": "IMO-007",
+      "imovel_titulo": "Casa em Condomínio Fechado no Morumbi (IMO-007)"
+    },
+    "resumo_corretor": "Casal com 3 filhos pequenos procurando casa em condomínio fechado com jardim privativo no Morumbi. Prioridade máxima para segurança armada 24h e proximidade ao Porto Seguro.",
+    "data_recebimento": "2026-09-04",
+    "ultima_interacao": "2026-09-04T15:30:00",
+    "necessita_follow_up": false
+  },
+  {
+    "lead_id": "LEAD-553456333",
+    "telegram_id": 553456333,
+    "nome": "Carlos Drummond (Fundo Alpha)",
+    "intencao": "investimento",
+    "status": "qualificado",
+    "score_qualificacao": 85,
+    "criterios": {
+      "tipo_imovel": "studio",
+      "regiao": "Zona Leste",
+      "bairros": [
+        "Belém",
+        "Tucuruvi"
+      ],
+      "ticket_investimento": 600000,
+      "urgencia": "Imediata (alocação de liquidez à vista)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-017",
+      "IMO-013"
+    ],
+    "resumo_corretor": "Investidor profissional procurando alocar R$ 600.000 em 2 studios compactos para locação de alta rentabilidade (Yield > 8.8% a.a.) no eixo de mobilidade metroviária.",
+    "data_recebimento": "2026-09-03",
+    "ultima_interacao": "2026-09-03T16:40:00",
+    "necessita_follow_up": true
+  },
+  {
+    "lead_id": "LEAD-554567444",
+    "telegram_id": 554567444,
+    "nome": "Fernanda e Marcos Guimarães",
+    "intencao": "compra",
+    "status": "visita_agendada",
+    "score_qualificacao": 90,
+    "criterios": {
+      "tipo_imovel": "casa",
+      "regiao": "Zona Norte",
+      "bairros": [
+        "Jardim São Paulo",
+        "Santana"
+      ],
+      "faixa_preco_max": 1200000,
+      "quartos": 3,
+      "urgencia": "Alta (imóvel anterior vendido, prazo de 60 dias)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-011",
+      "IMO-010"
+    ],
+    "agendamento": {
+      "corretor_id": "CORR-03",
+      "corretor_nome": "Roberto Prado",
+      "data_hora": "2026-09-12T10:00:00",
+      "tipo": "Visita Presencial ao Imóvel",
+      "imovel_id": "IMO-011",
+      "imovel_titulo": "Sobrado Charmoso no Jardim São Paulo (IMO-011)"
+    },
+    "resumo_corretor": "Família tradicional da Zona Norte buscando upgrade para sobrado com quintal e garagem ampla no Jardim São Paulo. Já estão com carta de crédito aprovada.",
+    "data_recebimento": "2026-09-03",
+    "ultima_interacao": "2026-09-03T11:20:00",
+    "necessita_follow_up": false
+  },
+  {
+    "lead_id": "LEAD-555678555",
+    "telegram_id": 555678555,
+    "nome": "Lucas Mendonça",
+    "intencao": "aluguel",
+    "status": "qualificado",
+    "score_qualificacao": 80,
+    "criterios": {
+      "tipo_imovel": "apartamento",
+      "regiao": "Zona Oeste",
+      "bairros": [
+        "Butantã"
+      ],
+      "preco_max": 2900,
+      "quartos": 2,
+      "urgencia": "Média (início do próximo semestre acadêmico)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-009"
+    ],
+    "resumo_corretor": "Pesquisador da pós-graduação da USP procurando apartamento de 2 dormitórios com fácil acesso ao Portão 1 da Cidade Universitária e Linha Amarela. Orçamento até R$ 2.900/mês.",
+    "data_recebimento": "2026-09-02",
+    "ultima_interacao": "2026-09-02T14:15:00",
+    "necessita_follow_up": false
+  },
+  {
+    "lead_id": "LEAD-556789666",
+    "telegram_id": 556789666,
+    "nome": "Sofia Vandermeer",
+    "intencao": "aluguel",
+    "status": "qualificado",
+    "score_qualificacao": 90,
+    "criterios": {
+      "tipo_imovel": "apartamento",
+      "regiao": "Zona Sul",
+      "bairros": [
+        "Campo Belo",
+        "Moema"
+      ],
+      "preco_max": 9000,
+      "quartos": 3,
+      "urgencia": "Alta (transferência corporativa internacional)"
+    },
+    "imoveis_sugeridos": [
+      "IMO-005"
+    ],
+    "resumo_corretor": "Diretora executiva de multinacional europeia transferida para filial em SP. Procura locação corporativa de alto padrão na Zona Sul com gerador, segurança e 3 suítes.",
+    "data_recebimento": "2026-09-01",
+    "ultima_interacao": "2026-09-01T09:40:00",
+    "necessita_follow_up": true
+  }
+]

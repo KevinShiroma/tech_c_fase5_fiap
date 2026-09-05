@@ -1,0 +1,49 @@
+{
+  "telegram_id": 553456333,
+  "nome": "Carlos Drummond (Fundo Alpha)",
+  "ultima_atualizacao": "2026-09-03T16:50:00",
+  "mensagens": [
+    {
+      "autor": "Carlos Drummond",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 16:35:10",
+      "conteudo": "Boa tarde, Sofia. Represento um clube de investidores privados. Estamos alocando capital em studios compactos nas regiões da Faria Lima, Itaim Bibi e Vila Olímpia para locação via short-stay (Airbnb / Housi)."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 16:35:35",
+      "conteudo": "Boa tarde, Sr. Carlos! Muito bem-vindo. Essa é uma das teses mais rentáveis do mercado corporativo paulistano. Qual o volume financeiro do lote e a meta de cap rate anual que vocês buscam?"
+    },
+    {
+      "autor": "Carlos Drummond",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 16:38:20",
+      "conteudo": "Queremos montar um pacote de 3 a 5 unidades, teto de R$ 2.500.000 no total. Precisamos de yield líquido superior a 0,65% ao mês e prédios com gestão profissional de portaria digital e lavanderia coletiva."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 16:41:00",
+      "conteudo": "Excelente parametrização! Temos unidades no Studio Design Vila Olímpia (IMO-002) por R$ 480.000/unidade com alta liquidez comprovada de diárias corporativas. Montamos um estudo de viabilidade e projeção de retorno para apresentar ao fundo."
+    },
+    {
+      "autor": "Carlos Drummond",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 16:44:00",
+      "conteudo": "Ótimo. Encaminhe o memorando executivo e marque uma reunião com o sócio-diretor da imobiliária para alinharmos as condições comerciais."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 16:46:00",
+      "conteudo": "Registrado com prioridade de Investimento Institucional (Score 95%). O diretor de contas corporativas entrará em contato com a apresentação completa."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "telegram_id": 552345222,
+  "nome": "Patrícia e Rodrigo Albuquerque",
+  "ultima_atualizacao": "2026-09-04T15:30:00",
+  "mensagens": [
+    {
+      "autor": "Patrícia",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 15:15:10",
+      "conteudo": "Olá! Estamos procurando uma casa em condomínio fechado na Zona Sul, de preferência Morumbi ou Jardim Guedala. Temos 2 filhos e um cachorro grande."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 15:15:30",
+      "conteudo": "Olá, Patrícia e Rodrigo! É um prazer atendê-los. O Morumbi e o Jardim Guedala possuem os melhores condomínios horizontais com segurança privativa da cidade. Quantos quartos e vagas vocês desejam, e qual a faixa de investimento pretendida?"
+    },
+    {
+      "autor": "Rodrigo",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 15:18:40",
+      "conteudo": "Mínimo 4 suítes e pelo menos 3 ou 4 vagas. Um quintal com piscina é essencial para as crianças. Temos orçamento aprovado de até R$ 3.000.000, com entrada à vista de 50%."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 15:20:15",
+      "conteudo": "Fantástico! Temos a Casa em Condomínio Fechado no Morumbi (IMO-013), com 380m², 4 suítes, living voltado para a piscina privativa, espaço gourmet e 4 vagas cobertas, por R$ 2.850.000."
+    },
+    {
+      "autor": "Patrícia",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 15:23:00",
+      "conteudo": "Parece exatamente o que sonhamos! Queremos agendar uma visita com a família toda no próximo sábado de manhã."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 15:25:00",
+      "conteudo": "Perfeito! Ficha qualificada gerada com Score 90%. Nossa especialista de alto padrão Juliana Silveira entrará em contato para alinhar a autorização de entrada na portaria do condomínio."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "telegram_id": 556789666,
+  "nome": "Sofia Vandermeer",
+  "ultima_atualizacao": "2026-09-01T17:15:00",
+  "mensagens": [
+    {
+      "autor": "Sofia Vandermeer",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-01 17:00:10",
+      "conteudo": "Olá! Estou me mudando de Amsterdã para São Paulo para assumir uma diretoria corporativa. Preciso de um apartamento de alto padrão para locação em Moema ou Vila Nova Conceição."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-01 17:00:25",
+      "conteudo": "Bem-vinda a São Paulo, Sofia! Ficamos muito honrados em assessorar sua mudança. Vila Nova Conceição e Moema são bairros nobres excepcionais, próximos ao Parque Ibirapuera. Quais os principais requisitos e o teto orçamentário da locação corporativa?"
+    },
+    {
+      "autor": "Sofia Vandermeer",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-01 17:03:40",
+      "conteudo": "O contrato será pago pela multinacional com seguro-fiança corporativo. Orçamento de até R$ 14.000 mensais. Desejo 3 suítes, varanda com vista aberta para a copa das árvores e prédio com segurança armada."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-01 17:06:00",
+      "conteudo": "Magnífica escolha! Temos uma residência de altíssimo padrão em frente à Praça Pereira Coutinho (Vila Nova Conceição) com 220m², 3 amplas suítes, varanda gourmet envidraçada e guarita blindada, com locação em R$ 12.500/mês."
+    },
+    {
+      "autor": "Sofia Vandermeer",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-01 17:09:00",
+      "conteudo": "Excelente! Meu assistente entrará em contato para aprovar a documentação corporativa e agendar uma vistoria técnica presencial assim que eu desembarcar em Guarulhos."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-01 17:11:00",
+      "conteudo": "Perfeito! Ficha VIP gerada com Score 95%. Nossa assessora de clientes internacionais entrará em contato direto com a sua assessoria para coordenar a recepção."
+    }
+  ]
+}

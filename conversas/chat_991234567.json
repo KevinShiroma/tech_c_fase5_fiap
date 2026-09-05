@@ -1,0 +1,49 @@
+{
+  "telegram_id": 991234567,
+  "nome": "Larissa Fontana",
+  "ultima_atualizacao": "2026-09-05T11:45:00",
+  "mensagens": [
+    {
+      "autor": "Larissa",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 11:30:10",
+      "conteudo": "Olá! Estou procurando um apartamento com 3 quartos em Moema para comprar."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 11:30:15",
+      "conteudo": "Olá, Larissa! Seja muito bem-vinda à Imobiliária Prime. Moema é uma região fantástica! Qual é a sua faixa de orçamento ideal para essa aquisição?"
+    },
+    {
+      "autor": "Larissa",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 11:32:00",
+      "conteudo": "Nosso limite é até R$ 1.300.000. Queremos fechar nos próximos 45 dias."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 11:33:00",
+      "conteudo": "Temos uma oportunidade perfeita: Apartamento Moderno em Moema Pássaros (IMO-001) por R$ 1.250.000 com varanda gourmet e lazer completo. Podemos agendar uma visita presencial com a nossa especialista Juliana Silveira?"
+    },
+    {
+      "autor": "Larissa",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 11:40:00",
+      "conteudo": "Sim, adoraria! Quarta-feira dia 09/09 pela manhã seria perfeito."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 11:45:00",
+      "conteudo": "Perfeito! Visita confirmada para quarta-feira, 09/09 às 10:30 com a corretora Juliana Silveira no imóvel IMO-001. Já enviei os dados para a equipe."
+    }
+  ]
+}

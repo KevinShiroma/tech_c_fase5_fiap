@@ -1,0 +1,46 @@
+{
+  "cenarios": {
+    "compra": {
+      "descricao": "Cliente interessado em adquirir imóvel próprio para moradia",
+      "campos_obrigatorios": [
+        "faixa_preco",
+        "regiao_interesse",
+        "quantidade_quartos",
+        "urgencia_compra"
+      ],
+      "proximo_passo": "agendar_visita_ou_reuniao",
+      "especialista_alvo": "Residencial Zona Sul / Especialista Bairro"
+    },
+    "investimento": {
+      "descricao": "Cliente focado em alocação de capital e geração de renda/dividendos",
+      "campos_obrigatorios": [
+        "ticket_investimento",
+        "expectativa_retorno_yield",
+        "prazo_investimento",
+        "perfil_investidor"
+      ],
+      "proximo_passo": "direcionar_para_especialista_investimento",
+      "especialista_alvo": "Carlos Mendes - Consultoria de Renda Imobiliária"
+    },
+    "aluguel": {
+      "descricao": "Cliente interessado em locação residencial",
+      "campos_obrigatorios": [
+        "faixa_aluguel",
+        "bairros_interesse",
+        "quantidade_quartos",
+        "data_mudanca"
+      ],
+      "proximo_passo": "agendar_visita_imovel",
+      "especialista_alvo": "Roberto Prado - Locações"
+    },
+    "follow_up": {
+      "descricao": "Regras de reengajamento para leads que pararam de responder",
+      "tempo_espera_minutos": 15,
+      "mensagens_gatilho": [
+        "Oi {nome}, tudo bem? Vi que estávamos conversando sobre as opções de imóveis em {regiao}. Conseguiu dar uma olhada nas opções que separei para você?",
+        "Olá {nome}! Chegou uma nova oportunidade no perfil que você mencionou (até {faixa_preco}). Gostaria que eu te enviasse os detalhes?",
+        "Oi {nome}, só passando para saber se ainda faz sentido falarmos sobre a sua busca de imóvel ou se prefere retomar mais adiante!"
+      ]
+    }
+  }
+}

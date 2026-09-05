@@ -1,0 +1,57 @@
+[
+  {
+    "id": "CORR-01",
+    "nome": "Carlos Mendes",
+    "especialidade": "Investimentos e Imóveis de Alta Rentabilidade",
+    "telefone": "+55 11 98888-1111",
+    "email": "carlos.mendes@imobiliaria.com",
+    "horarios_disponiveis": [
+      "2026-09-08T10:00:00",
+      "2026-09-08T14:30:00",
+      "2026-09-09T11:00:00",
+      "2026-09-09T16:00:00",
+      "2026-09-10T15:00:00"
+    ]
+  },
+  {
+    "id": "CORR-02",
+    "nome": "Juliana Silveira",
+    "especialidade": "Locação Residencial (Zona Sul e Zona Norte)",
+    "telefone": "+55 11 98888-2222",
+    "email": "juliana.silveira@imobiliaria.com",
+    "horarios_disponiveis": [
+      "2026-09-08T09:30:00",
+      "2026-09-08T15:00:00",
+      "2026-09-09T10:30:00",
+      "2026-09-09T14:00:00",
+      "2026-09-10T11:00:00"
+    ]
+  },
+  {
+    "id": "CORR-03",
+    "nome": "Roberto Prado",
+    "especialidade": "Locação Residencial (Zona Oeste e Zona Leste)",
+    "telefone": "+55 11 98888-3333",
+    "email": "roberto.prado@imobiliaria.com",
+    "horarios_disponiveis": [
+      "2026-09-08T11:00:00",
+      "2026-09-08T16:30:00",
+      "2026-09-09T09:00:00",
+      "2026-09-10T14:00:00"
+    ]
+  },
+  {
+    "id": "CORR-04",
+    "nome": "Eduardo Albuquerque",
+    "especialidade": "Compras e Vendas Residencial Geral (São Paulo)",
+    "telefone": "+55 11 98888-4444",
+    "email": "eduardo.albuquerque@imobiliaria.com",
+    "horarios_disponiveis": [
+      "2026-09-08T10:00:00",
+      "2026-09-08T14:00:00",
+      "2026-09-09T11:30:00",
+      "2026-09-09T15:30:00",
+      "2026-09-10T16:00:00"
+    ]
+  }
+]

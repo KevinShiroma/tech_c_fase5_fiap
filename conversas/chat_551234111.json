@@ -1,0 +1,49 @@
+{
+  "telegram_id": 551234111,
+  "nome": "Dr. Eduardo Paiva",
+  "ultima_atualizacao": "2026-09-04T18:20:00",
+  "mensagens": [
+    {
+      "autor": "Dr. Eduardo Paiva",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 18:10:05",
+      "conteudo": "Olá, boa tarde! Sou médico residente no HC-FMUSP e preciso de um apartamento ou studio mobiliado para alugar na região de Pinheiros ou Cerqueira César o quanto antes."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 18:10:20",
+      "conteudo": "Olá, Dr. Eduardo! Seja muito bem-vindo à Prime. Parabéns pela residência no Hospital das Clínicas! Temos excelentes opções a poucos minutos a pé do complexo. Qual faixa de valor de locação você tem em mente?"
+    },
+    {
+      "autor": "Dr. Eduardo Paiva",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 18:12:30",
+      "conteudo": "Posso pagar até R$ 3.800 de pacote total. Preciso que tenha academia no prédio e vaga de garagem, pois faço plantões noturnos frequentes."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 18:13:45",
+      "conteudo": "Excelente! Temos o Studio Smart Pinheiros (IMO-004) a 400m do metrô Oscar Freire, totalmente mobiliado, com academia equipada 24h e 1 vaga, com aluguel em R$ 3.200/mês. Perfeito para a sua rotina!"
+    },
+    {
+      "autor": "Dr. Eduardo Paiva",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 18:16:10",
+      "conteudo": "Perfeito! Como funciona para visitar o imóvel e dar entrada na análise cadastral?"
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-04 18:17:00",
+      "conteudo": "Já registrei sua prioridade alta e preparei sua ficha. O especialista Marcos Vinicius entrará em contato via WhatsApp para combinar o melhor horário entre seus plantões e enviar o link de vistoria virtual e presencial."
+    }
+  ]
+}

@@ -1,0 +1,49 @@
+{
+  "telegram_id": 884567890,
+  "nome": "Marcelo Oliveira",
+  "ultima_atualizacao": "2026-09-05T12:30:00",
+  "mensagens": [
+    {
+      "autor": "Marcelo",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 12:15:00",
+      "conteudo": "Boa tarde, procuro studios para investimento na Zona Oeste com foco em retorno com Airbnb."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 12:15:10",
+      "conteudo": "Olá Marcelo! Seja bem-vindo à Imobiliária Prime. Temos excelentes oportunidades de studios compactos em Pinheiros (IMO-004) com Yield projetado de 9.1% a.a. e na Vila Mariana (IMO-002) com 8.4% a.a. Qual o seu capital disponível para aporte?"
+    },
+    {
+      "autor": "Marcelo",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 12:20:00",
+      "conteudo": "Tenho até 450 mil disponíveis à vista."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 12:25:00",
+      "conteudo": "Excelente! O Studio em Pinheiros está exatamente R$ 450.000 e já mobiliado para short-stay. Gostaria de uma consultoria com nosso especialista em investimentos Carlos Mendes?"
+    },
+    {
+      "autor": "Marcelo",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 12:28:00",
+      "conteudo": "Quinta dia 10 às 15h fica bom para mim."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-05 12:30:00",
+      "conteudo": "Agendado com sucesso! Quinta-feira, 10/09 às 15:00 com o especialista Carlos Mendes."
+    }
+  ]
+}

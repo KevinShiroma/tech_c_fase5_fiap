@@ -1,0 +1,49 @@
+{
+  "telegram_id": 554567444,
+  "nome": "Fernanda e Marcos Guimarães",
+  "ultima_atualizacao": "2026-09-03T11:20:00",
+  "mensagens": [
+    {
+      "autor": "Fernanda",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 11:05:10",
+      "conteudo": "Bom dia! Moramos em um apartamento pequeno na Zona Norte e estamos buscando um sobrado amplo com quintal ou espaço gourmet para a família em Santana ou Jardim São Paulo."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 11:05:30",
+      "conteudo": "Bom dia, Fernanda e Marcos! Que excelente momento de vida. A Zona Norte tem opções maravilhosas com ruas arborizadas e muita tranquilidade. Vocês já têm uma faixa de valor de investimento estipulada?"
+    },
+    {
+      "autor": "Marcos",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 11:08:45",
+      "conteudo": "Pensamos em algo entre R$ 850.000 e R$ 980.000. Já temos carta de crédito imobiliário pré-aprovada pelo banco de R$ 600.000 e o restante em recursos próprios."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 11:10:20",
+      "conteudo": "Perfeito! A pré-aprovação de crédito agiliza todo o processo de compra. Temos o Sobrado Reformado em Santana (IMO-009) com 180m², 3 dormitórios sendo 1 suíte, churrasqueira privativa e 2 vagas por R$ 890.000."
+    },
+    {
+      "autor": "Fernanda",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 11:13:00",
+      "conteudo": "Adoramos a localização desse imóvel! Fica próximo ao colégio das crianças. Queremos visitar no próximo sábado."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-03 11:15:00",
+      "conteudo": "Excelente! Ficha técnica gerada com Score 85%. Nosso especialista da Zona Norte, Roberto Mendes, entrará em contato para agendar o tour presencial."
+    }
+  ]
+}

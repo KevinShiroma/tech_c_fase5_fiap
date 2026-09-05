@@ -1,0 +1,49 @@
+{
+  "telegram_id": 555678555,
+  "nome": "Lucas Mendonça",
+  "ultima_atualizacao": "2026-09-02T14:40:00",
+  "mensagens": [
+    {
+      "autor": "Lucas",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-02 14:25:00",
+      "conteudo": "E aí, tudo bem? Sou estudante da Poli-USP e preciso alugar um studio ou apê pequeno de 1 quarto bem perto da USP ou do Metrô Butantã."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-02 14:25:20",
+      "conteudo": "Olá, Lucas! Tudo ótimo por aqui, e com você? Parabéns pelos estudos na Poli! Morar perto do metrô facilita muito a rotina na Cidade Universitária. Qual o valor máximo mensal que você planeja gastar com aluguel + condomínio?"
+    },
+    {
+      "autor": "Lucas",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-02 14:28:10",
+      "conteudo": "Meu teto é R$ 2.400 pacote fechado. Meus pais serão meus fiadores com renda comprovada. Preciso de conexão rápida de internet e portaria segura."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-02 14:30:15",
+      "conteudo": "Perfeito, Lucas! A garantia por fiador facilita bastante a aprovação. Temos o Studio Moderno no Butantã (IMO-008) a 500m do metrô, condomínio com coworking, lavanderia e academia, por R$ 2.100 pacote. Quer que reservemos uma visita?"
+    },
+    {
+      "autor": "Lucas",
+      "role": "user",
+      "tipo": "texto",
+      "timestamp": "2026-09-02 14:33:00",
+      "conteudo": "Show de bola! Quero sim, posso ir amanhã mesmo à tarde logo após as minhas aulas."
+    },
+    {
+      "autor": "Sofia (SDR)",
+      "role": "assistant",
+      "tipo": "texto",
+      "timestamp": "2026-09-02 14:35:00",
+      "conteudo": "Combinado! Já passei a ficha para o corretor responsável pela Zona Oeste entrar em contato e enviar a chave virtual da portaria para a visita."
+    }
+  ]
+}
