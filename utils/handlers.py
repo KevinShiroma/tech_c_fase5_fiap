@@ -4,7 +4,15 @@ from telegram import Update
 from telegram.constants import ChatAction
 from telegram.ext import ContextTypes
 from agent import SDRImobiliarioAgent
-from .helpers import is_user_allowed, get_nome_agente_log, AUDIO_TEMP_DIR, registrar_mensagem_historico
+from .helpers import (
+    is_user_allowed,
+    get_nome_agente_log,
+    AUDIO_TEMP_DIR,
+    registrar_mensagem_historico,
+    load_json,
+    save_json,
+    LEADS_PATH
+)
 from .followup import executar_followup_lead
 
 logger = logging.getLogger("bot_sdr")
@@ -13,7 +21,7 @@ logger = logging.getLogger("bot_sdr")
 agent = SDRImobiliarioAgent()
 
 async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
-    """Handler do comando /start: reinicia sessão do lead para a triagem primária (Sofia)."""
+    """Handler do comando /start: reinicia sessão do lead para a triagem primária (Sofia) e zera histórico anterior."""
     user = update.effective_user
     user_id = user.id if user else 0
     user_name = user.first_name if user else "Cliente"
@@ -23,6 +31,28 @@ async def start(update: Update, context: ContextTypes.DEFAULT_TYPE):
     # Reinicia o fluxo de atendimento: volta para o Agente Primário (Sofia - Triagem)
     agent.agente_ativo[user_id] = "triagem"
     agent.sessions.pop(user_id, None)
+
+    # Reseta o registro do lead no leads.json para não misturar com atendimentos anteriores
+    try:
+        leads = load_json(LEADS_PATH)
+        lead = next((l for l in leads if str(l.get("telegram_id")) == str(user_id)), None)
+        if lead:
+            lead["intencao"] = "triagem"
+            lead["status"] = "em_triagem"
+            lead["score_qualificacao"] = 50
+            lead["criterios"] = {}
+            lead["agendamento"] = None
+            lead["resumo_corretor"] = "Novo atendimento iniciado. Triagem em andamento com Sofia."
+            lead["agente_responsavel"] = "Sofia (Triagem)"
+            lead["ultima_interacao"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+            lead["necessita_follow_up"] = False
+            lead["status_followup"] = "Aguardando Interação"
+            lead["tentativas_followup"] = 0
+            lead["data_ultimo_followup"] = None
+            save_json(LEADS_PATH, leads)
+            logger.info(f"🧹 [RESET LEADS]: Lead {user_name} ({user_id}) resetado com sucesso no leads.json para novo atendimento.")
+    except Exception as ex_reset:
+        logger.error(f"Erro ao resetar lead no leads.json no /start: {ex_reset}")
 
     # Registra o marco divisório no histórico para separação clara dos atendimentos
     registrar_mensagem_historico(

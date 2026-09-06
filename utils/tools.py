@@ -195,8 +195,13 @@ def tool_transferir_para_especialista(
     leads = load_json_fn(leads_path)
     lead = next((l for l in leads if str(l.get("telegram_id")) == str(telegram_id)), None)
     if lead:
+        intencao_antiga = lead.get("intencao")
+        if intencao_antiga and intencao_antiga != especialidade:
+            lead["criterios"] = {}
+            lead["agendamento"] = None
         lead["intencao"] = especialidade
         lead["agente_responsavel"] = nome_agente
+        lead["resumo_corretor"] = f"Cliente em atendimento com {nome_agente}. Motivo: {motivo}."
         lead["ultima_interacao"] = datetime.now().isoformat()
         save_json_fn(leads_path, leads)
     else:
@@ -313,7 +318,7 @@ def tool_atualizar_lead(
 ) -> str:
     """Atualiza a qualificação e o resumo executivo do lead para os corretores."""
     leads = load_json_fn(leads_path)
-    lead = next((l for l in leads if l.get("telegram_id") == telegram_id), None)
+    lead = next((l for l in leads if str(l.get("telegram_id")) == str(telegram_id)), None)
     if not lead:
         lead = {
             "lead_id": f"LEAD-{telegram_id}",
@@ -329,13 +334,21 @@ def tool_atualizar_lead(
         }
         leads.append(lead)
     else:
-        lead["intencao"] = args.get("intencao", lead.get("intencao"))
+        intencao_antiga = lead.get("intencao")
+        nova_intencao = args.get("intencao", intencao_antiga)
+        if intencao_antiga and nova_intencao and intencao_antiga != nova_intencao:
+            lead["criterios"] = args.get("criterios", {})
+            lead["agendamento"] = None
+        else:
+            if "criterios" in args:
+                lead["criterios"] = args["criterios"]
+
+        lead["intencao"] = nova_intencao
         lead["status"] = "qualificado"
         if "score" in args:
             lead["score_qualificacao"] = args["score"]
-        if "criterios" in args:
-            lead["criterios"] = args["criterios"]
-        lead["resumo_corretor"] = args.get("resumo_corretor", lead.get("resumo_corretor"))
+        if "resumo_corretor" in args:
+            lead["resumo_corretor"] = args["resumo_corretor"]
         lead["ultima_interacao"] = datetime.now().isoformat()
         lead["necessita_follow_up"] = False
 

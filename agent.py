@@ -190,7 +190,12 @@ class SDRImobiliarioAgent:
         if os.path.exists(json_file):
             try:
                 chat_data = load_json(json_file)
-                mensagens_anteriores = chat_data.get("mensagens", [])
+                mensagens_todas = chat_data.get("mensagens", [])
+                idx_inicio = 0
+                for i, m in enumerate(mensagens_todas):
+                    if m.get("tipo") == "sistema" or "NOVO ATENDIMENTO" in m.get("conteudo", ""):
+                        idx_inicio = i + 1
+                mensagens_anteriores = mensagens_todas[idx_inicio:]
             except Exception: pass
 
         transcricao = "\n".join([f"- {m.get('autor', 'Pessoa')}: {m.get('conteudo', '')}" for m in mensagens_anteriores[-6:]])

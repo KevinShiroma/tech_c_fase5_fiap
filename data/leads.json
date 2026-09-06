@@ -3,33 +3,20 @@
     "lead_id": "LEAD-6166764483",
     "telegram_id": 6166764483,
     "nome": "Kevin",
-    "intencao": "aluguel",
-    "status": "qualificado",
-    "score_qualificacao": 90,
-    "criterios": {
-      "regiao": "Brooklin",
-      "quartos": 2,
-      "preco_max": 900000,
-      "urgencia": "flexível"
-    },
-    "imoveis_sugeridos": [
-      "IMO-006",
-      "IMO-009"
-    ],
-    "agendamento": {
-      "corretor_id": "CORR-02",
-      "corretor_nome": "Juliana Silveira",
-      "data_hora": "2026-09-10T11:00:00",
-      "tipo_visita": "Visita ao Apartamento Familiar no Brooklin"
-    },
-    "resumo_corretor": "Cliente Kevin manifestou interesse em investir em imóveis.",
-    "data_recebimento": "2026-09-05",
-    "ultima_interacao": "2026-09-05T19:08:14.136176",
+    "intencao": "triagem",
+    "status": "em_triagem",
+    "score_qualificacao": 50,
+    "criterios": {},
+    "imoveis_sugeridos": [],
+    "agendamento": null,
+    "resumo_corretor": "Novo atendimento iniciado. Aguardando preferências do cliente na conversa atual.",
+    "data_recebimento": "2026-09-06",
+    "ultima_interacao": "2026-09-06 17:15:00",
     "necessita_follow_up": false,
-    "status_followup": "Follow-up Enviado",
-    "data_ultimo_followup": "2026-09-05 17:22:39",
-    "tentativas_followup": 4,
-    "agente_responsavel": "Camila (Agente de Locação)"
+    "status_followup": "Aguardando Interação",
+    "data_ultimo_followup": null,
+    "tentativas_followup": 0,
+    "agente_responsavel": "Sofia (Triagem)"
   },
   {
     "lead_id": "LEAD-991234567",
