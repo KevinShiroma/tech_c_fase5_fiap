@@ -113,6 +113,8 @@ Automação do funil comercial e gestão em tempo real:
 ### Triagem e Handoff Dinâmico para Locação (Camila)
 O agente primário identifica a necessidade do cliente e transfere instantaneamente para a especialista em locação, mantendo a regra de uma pergunta por vez.
 
+<img width="1819" height="870" alt="Dashboard do Corretor" src="https://github.com/KevinShiroma/tech_c_fase5_fiap/blob/main/images/3.PNG" />
+
 ```text
 [CLIENTE]: Olá, gostaria de alugar um apartamento na Zona Leste.
 [ROTEAMENTO]: Lead transferido para Camila (Agente de Locação). Motivo: Interesse em aluguel na Zona Leste.
@@ -123,6 +125,9 @@ Excelente escolha! Para eu buscar as melhores opções na Zona Leste, qual é a 
 
 ### Transição entre Modalidades (Compra) e Alocação de Corretor Humano
 Quando o cliente muda de ideia durante a conversa, o sistema executa o *handoff* cruzado e aloca o corretor correto de acordo com a regra de negócio.
+
+
+
 
 ```text
 [CLIENTE]: Mudei de ideia, prefiro ver opções de compra na Zona Sul.
@@ -147,7 +152,10 @@ O sistema processa notas de voz do Telegram, transcreve com alta fidelidade e re
 ### Portal do Corretor (Dashboard Streamlit)
 A interface analítica exibe métricas em tempo real, funil de conversão e histórico detalhado das conversas:
 
-<img width="1819" height="870" alt="Dashboard do Corretor" src="[INSERIR_LINK_OU_PRINT_DO_DASHBOARD_AQUI]" />
+<img width="1819" height="870" alt="Dashboard do Corretor" src="https://github.com/KevinShiroma/tech_c_fase5_fiap/blob/main/images/1.PNG" />
+
+Painel com métricas sobre os leads
+<img width="1819" height="870" alt="Dashboard do Corretor" src="https://github.com/KevinShiroma/tech_c_fase5_fiap/blob/main/images/2.PNG" />
 
 ## 📂 Estrutura do Projeto
 
