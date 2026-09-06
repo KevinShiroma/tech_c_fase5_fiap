@@ -15,76 +15,73 @@ O ecossistema foi desenhado para atendimento conversacional em tempo real, quali
 * **Portal de Acompanhamento (Dashboard):** Interface analítica em Streamlit para corretores e gestores, exibindo funil comercial, KPIs, cards dos corretores vinculados aos seus agentes de IA e histórico completo das conversas em tempo real.
   
 ```mermaid
-graph TD
-    %% Nós principais
-    TG[📱 Telegram Bot / bot.py]
+flowchart TB
+    %% ==========================================
+    %% CAMADA 1: INTERAÇÃO E CANAIS
+    %% ==========================================
+    subgraph C1["📱 1. Canal de Atendimento (Telegram)"]
+        direction LR
+        USER["👤 Cliente"]
+        TG_TXT["💬 Mensagem de Texto"]
+        TG_VOICE["🎙️ Nota de Voz (.oga)"]
+        SPEECH["🔊 Azure Speech AI\n(PyAV + Transcrição pt-BR)"]
 
-    %% Subgráficos para organizar por Módulos
-    subgraph Módulo de Voz / Voice AI
-        V_OGG[(Áudio: Telegram .oga/.ogg)]
-        V_PROC[Audio Resampler / PyAV]
-        V_API[Azure Speech SDK pt-BR]
-        V_OUT(Texto Transcrito)
+        USER --> TG_TXT
+        USER --> TG_VOICE
+        TG_VOICE --> SPEECH
     end
 
-    subgraph Módulo Multiagente LangChain / agent.py
-        AG_CORE[Orquestrador Multiagente]
-        AG_SOFIA[Sofia: Triagem e Acolhimento]
-        AG_CAMILA[Camila: Especialista em Locação]
-        AG_VERONICA[Verônica: Especialista em Compra]
-        AG_RODRIGO[Rodrigo: Especialista em Investimentos]
+    %% ==========================================
+    %% CAMADA 2: MULTIAGENTES & RACIOCÍNIO
+    %% ==========================================
+    subgraph C2["🧠 2. Núcleo Multiagente (LangChain + Azure OpenAI)"]
+        direction TB
+        SOFIA["🌸 Sofia\n(Triagem e Acolhimento)"]
+        
+        subgraph ESPECIALISTAS["Especialistas Verticais (Handoff Dinâmico)"]
+            CAMILA["🔑 Camila\nLocação Residencial\n(Juliana / Roberto)"]
+            VERONICA["🏡 Verônica\nCompra Residencial\n(Eduardo Albuquerque)"]
+            RODRIGO["📈 Rodrigo\nInvestimentos & ROI\n(Carlos Mendes)"]
+        end
+
+        SOFIA -->|Aluguel| CAMILA
+        SOFIA -->|Compra| VERONICA
+        SOFIA -->|Investimento| RODRIGO
     end
 
-    subgraph Módulo de Ferramentas / Function Calling
-        T_BUSCA[buscar_imoveis / RAG]
-        T_FOTO[enviar_fotos_imovel]
-        T_AGENDA[consultar_agenda / confirmar_agendamento]
-        T_LEAD[atualizar_lead_sdr]
+    TG_TXT --> SOFIA
+    SPEECH -->|Texto Transcrito| SOFIA
+
+    %% ==========================================
+    %% CAMADA 3: FERRAMENTAS E REGRAS DE NEGÓCIO
+    %% ==========================================
+    subgraph C3["⚙️ 3. Ferramentas (Function Calling)"]
+        direction LR
+        F_SEARCH["🔍 buscar_imoveis\n(Filtros e Preços)"]
+        F_PHOTO["📸 enviar_fotos_imovel\n(Unsplash HD)"]
+        F_AGENDA["📅 agendamento_visita\n(Regras Regionais)"]
+        F_SCORE["⭐ qualificar_lead\n(Score 0 a 100)"]
     end
 
-    subgraph Base de Dados / CRM Simulado
-        DB_IMOVEIS[(data/imoveis.json)]
-        DB_CORRETORES[(data/corretores.json)]
-        DB_LEADS[(data/leads.json)]
-        DB_CHATS[(conversas/chat_id.json)]
+    ESPECIALISTAS --> F_SEARCH
+    ESPECIALISTAS --> F_PHOTO
+    ESPECIALISTAS --> F_AGENDA
+    ESPECIALISTAS --> F_SCORE
+
+    %% ==========================================
+    %% CAMADA 4: DADOS, AUTOMAÇÃO E GESTÃO
+    %% ==========================================
+    subgraph C4["📊 4. Persistência & Gestão Comercial"]
+        direction LR
+        DB[("💾 CRM Simulado & Logs\n• imoveis.json\n• corretores.json\n• leads.json\n• conversas/")]
+        FOLLOWUP["⏰ Follow-up Automático\n(Reengajamento Proativo)"]
+        DASH["🖥️ Portal do Corretor\n(Streamlit na Nuvem)"]
     end
 
-    subgraph Módulo de Automação e Dashboard
-        F_SCHED[APScheduler / Background Job]
-        F_AUTO[Motor de Follow-up Proativo]
-        D_APP[dashboard.py / Streamlit]
-        D_ALERT((🚨 Alertas & Métricas do Funil))
-    end
-
-    %% Fluxos de Áudio
-    TG -- Nota de Voz --> V_OGG
-    V_OGG --> V_PROC
-    V_PROC --> V_API
-    V_API --> V_OUT
-    V_OUT --> AG_CORE
-
-    %% Fluxos de Texto
-    TG -- Mensagem de Texto --> AG_CORE
-    AG_CORE --> AG_SOFIA
-    AG_SOFIA -- Handoff Dinâmico --> AG_CAMILA
-    AG_SOFIA -- Handoff Dinâmico --> AG_VERONICA
-    AG_SOFIA -- Handoff Dinâmico --> AG_RODRIGO
-
-    %% Acesso a Ferramentas
-    AG_CAMILA & AG_VERONICA & AG_RODRIGO --> T_BUSCA & T_FOTO & T_AGENDA & T_LEAD
-
-    %% Interação com Dados
-    T_BUSCA --> DB_IMOVEIS
-    T_AGENDA --> DB_CORRETORES
-    T_LEAD & T_AGENDA --> DB_LEADS
-    AG_CORE --> DB_CHATS
-
-    %% Automação de Follow-up e Dashboard
-    F_SCHED --> F_AUTO
-    F_AUTO -- Verifica Inatividade --> DB_LEADS
-    F_AUTO -- Disparo Proativo --> TG
-    D_APP -- Leitura em tempo real --> DB_LEADS & DB_CORRETORES & DB_IMOVEIS & DB_CHATS
-    D_APP --> D_ALERT
+    F_SEARCH & F_PHOTO & F_AGENDA & F_SCORE --> DB
+    DB <--> FOLLOWUP
+    FOLLOWUP -.->|Mensagem Proativa| USER
+    DB --> DASH
 ```
 
 ## 📋 Sobre a Evolução (Fase 5)
