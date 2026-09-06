@@ -4,15 +4,15 @@ Este repositório contém o projeto da Fase 5 do Tech Challenge (Pós-Tech IA pa
 
 ## 📺 Demonstração do Projeto
 * **Link para o YouTube:** [INSERIR_LINK_DO_YOUTUBE_AQUI]
-* **Apresentação:** Demonstração prática do atendimento automatizado via Telegram, orquestração multiagente em tempo real (triagem com Sofia, locação com Camila, compra com Verônica e investimentos com Rodrigo), envio de fotos em alta resolução, Voice AI com transcrição de áudio via Azure Speech, motor de follow-up proativo e acompanhamento gerencial no dashboard em Streamlit.
+* **Apresentação:** Demonstração prática do atendimento automatizado via Telegram, orquestração multiagente em tempo real, Voice AI com transcrição de áudio via Azure Speech, motor de follow-up proativo e acompanhamento gerencial em Streamlit.
 
 ## 🛠️ Arquitetura do projeto
 O ecossistema foi desenhado para atendimento conversacional em tempo real, qualificação preditiva de clientes e integração com a agenda de corretores humanos, unindo IA Generativa e serviços gerenciados em nuvem.
 
 * **Integração em Nuvem (Azure):** Utilização do Azure OpenAI Service (`gpt-4.1-mini`) para raciocínio dos agentes e Function Calling, além do Azure Cognitive Services (Speech SDK) para transcrição de notas de voz em português brasileiro.
-* **Orquestração Multiagente (LangChain):** Estrutura multiagente composta por 1 agente de triagem primária e 3 especialistas verticais com transições dinâmicas (*handoff*) bidirecionais orientadas pela intenção do lead.
-* **Camada Conversacional e de Automação:** Bot assíncrono para Telegram com suporte multimídia (áudio, fotos e cards), integrado a um agendador em background (APScheduler) para follow-up de reengajamento a cada 60 minutos por no máximo 2 vezes.
-* **Portal de Acompanhamento (Dashboard):** Interface analítica em Streamlit para corretores e gestores, exibindo funil comercial, KPIs, cards dos corretores vinculados aos seus agentes de IA e histórico completo das conversas em tempo real.
+* **Orquestração Multiagente (LangChain):** Estrutura multiagente composta por 1 agente de triagem primária e 3 especialistas(compra, locação ou investimentos) orientadas pela intenção do lead.
+* **Camada Conversacional e de Automação:** Bot assíncrono para Telegram com suporte multimídia (áudio e fotos), integrado a um calendário e um mecanismo de follow-up de reengajamento a cada 60 minutos por no máximo 2 vezes.
+* **Portal de Acompanhamento (Dashboard):** Interface via Streamlit para corretores e gestores, exibindo funil comercial, KPIs, cards dos corretores vinculados aos seus agentes de IA e histórico completo das conversas em tempo real.
   
 ```mermaid
 flowchart TB
@@ -90,15 +90,15 @@ O foco desta fase foi a criação de um ecossistema comercial autônomo baseado 
 
 ### 1. Atendimento Conversacional e Multiagentes
 Implementação de agentes verticais especializados construídos com LangChain e Function Calling:
-* **Sofia (Triagem Primária):** Acolhe o cliente, identifica de imediato a intenção com diálogo ágil (uma pergunta por vez) e transfere o atendimento via *handoff* dinâmico.
-* **Camila (Especialista em Locação):** Focada em agilidade locatícia e direcionamento regional exclusivo para **Roberto Prado** (Zona Oeste/Leste) e **Juliana Silveira** (Zona Sul/Norte).
-* **Verônica (Especialista em Compra Residencial):** Conduz a qualificação passo a passo para aquisição de imóveis e direciona para o corretor **Eduardo Albuquerque** (Compras Geral).
-* **Rodrigo (Especialista em Investimentos):** Assessoria analítica voltada a rentabilidade, ROI e locação de curta temporada (Airbnb), direcionando reuniões com **Carlos Mendes**.
+* **Sofia (Triagem Primária):** Acolhe o cliente, identifica de imediato a intenção e transfere o atendimento ao agente responsável.
+  * **Camila (Especialista em Locação):** Focada em agilidade locatícia e direcionamento regional exclusivo para **Roberto Prado** (Zona Oeste/Leste) e **Juliana Silveira** (Zona Sul/Norte).
+  * **Verônica (Especialista em Compra Residencial):** Conduz a qualificação passo a passo para aquisição de imóveis e direciona para o corretor **Eduardo Albuquerque** (Compras Geral).
+  * **Rodrigo (Especialista em Investimentos):** Assessoria analítica voltada a rentabilidade, ROI e locação de curta temporada (Airbnb), direcionando reuniões com **Carlos Mendes**.
 
 ### 2. Voice AI e Processamento Multimodal
 Suporte completo a interações multimodais no canal de atendimento:
-* **Transcrição de Áudio:** Pipeline com `PyAV` para decodificação e reamostragem de áudios `.oga/.ogg` do Telegram para WAV PCM 16kHz mono, integrado ao Azure Cognitive Services Speech SDK para transcrição rápida em português (`pt-BR`).
-* **Envio de Fotos em Alta Resolução:** Ferramenta dedicada para envio imediato de carrosséis de imagens reais dos imóveis diretamente no chat do Telegram via Unsplash.
+* **Transcrição de Áudio:** Pipeline com `PyAV` para decodificação uma vez que os áudios do telegram estão em formato `.oga/.ogg` e precisamos converter para WAV. E integração ao Azure Cognitive Services Speech SDK para transcrição rápida em português (`pt-BR`).
+* **Envio de Fotos em Alta Resolução:** Ferramenta dedicada para envio imediato de carrosséis de imagens reais dos imóveis diretamente no chat do Telegram via Unsplash (free copyright).
 
 ### 3. Qualificação Preditiva, Agendamento e Follow-up
 Automação do funil comercial e gestão em tempo real:
