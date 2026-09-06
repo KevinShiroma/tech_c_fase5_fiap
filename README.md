@@ -11,7 +11,7 @@ O ecossistema foi desenhado para atendimento conversacional em tempo real, quali
 
 * **Integração em Nuvem (Azure):** Utilização do Azure OpenAI Service (`gpt-4.1-mini`) para raciocínio dos agentes e Function Calling, além do Azure Cognitive Services (Speech SDK) para transcrição de notas de voz em português brasileiro.
 * **Orquestração Multiagente (LangChain):** Estrutura multiagente composta por 1 agente de triagem primária e 3 especialistas verticais com transições dinâmicas (*handoff*) bidirecionais orientadas pela intenção do lead.
-* **Camada Conversacional e de Automação:** Bot assíncrono para Telegram com suporte multimídia (áudio, fotos e cards), integrado a um agendador em background (APScheduler) para follow-up de reengajamento a cada 20 segundos.
+* **Camada Conversacional e de Automação:** Bot assíncrono para Telegram com suporte multimídia (áudio, fotos e cards), integrado a um agendador em background (APScheduler) para follow-up de reengajamento a cada 60 minutos por no máximo 2 vezes.
 * **Portal de Acompanhamento (Dashboard):** Interface analítica em Streamlit para corretores e gestores, exibindo funil comercial, KPIs, cards dos corretores vinculados aos seus agentes de IA e histórico completo das conversas em tempo real.
   
 ```mermaid
