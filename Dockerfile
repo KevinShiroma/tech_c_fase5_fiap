@@ -29,8 +29,8 @@ COPY . .
 # Expor a porta do Dashboard Streamlit
 EXPOSE 8501
 
-# Healthcheck do Streamlit
-HEALTHCHECK --interval=30s --timeout=10s --start-period=15s --retries=3 \
+# Healthcheck do Streamlit com margem segura de inicialização
+HEALTHCHECK --interval=30s --timeout=10s --start-period=60s --retries=5 \
     CMD curl --fail http://localhost:8501/_stcore/health || exit 1
 
 # Comando de entrada

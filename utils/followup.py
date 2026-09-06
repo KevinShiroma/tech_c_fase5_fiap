@@ -44,6 +44,18 @@ async def executar_followup_lead(bot_instance, agent_instance, telegram_id: int,
             )
         except Exception as e_final:
             logger.error(f"Erro crítico ao enviar mensagem de follow-up no Telegram: {e_final}")
+            # Marca como falha para não tentar repetidamente leads fictícios ou bloqueados
+            try:
+                leads = load_json(LEADS_PATH)
+                for l in leads:
+                    if str(l.get("telegram_id")) == str(telegram_id):
+                        l["status_followup"] = f"Não Entregue ({e_final})"
+                        l["tentativas_followup"] = 99
+                        l["data_ultimo_followup"] = datetime.now().strftime("%Y-%m-%d %H:%M:%S")
+                        break
+                save_json(LEADS_PATH, leads)
+            except Exception:
+                pass
             return {"sucesso": False, "erro": str(e_final)}
 
     # Registra no histórico de conversa
@@ -101,6 +113,10 @@ async def rotina_verificar_followups(context: ContextTypes.DEFAULT_TYPE):
             chat_data = load_json(chat_file)
             mensagens = chat_data.get("mensagens", [])
             if not mensagens:
+                continue
+
+            # Garante que só envia follow-up se houver interação real de um usuário (ignora leads puramente simulados)
+            if not any(m.get("role") == "user" for m in mensagens):
                 continue
 
             ultima_msg = mensagens[-1]
