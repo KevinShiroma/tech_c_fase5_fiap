@@ -3,7 +3,7 @@
 Este repositório contém o projeto da Fase 5 do Tech Challenge (Pós-Tech IA para Devs - Hackathon FIAP). O objetivo deste projeto é transformar o processo comercial de uma imobiliária através da implementação de um Agente SDR (Sales Development Representative) inteligente, utilizando uma arquitetura multiagente com LangChain, serviços cognitivos em nuvem (Azure OpenAI e Azure Speech) e um portal de gestão em Streamlit para qualificação, follow-up e agendamento automático de visitas.
 
 ## 📺 Demonstração do Projeto
-* **Link para o YouTube:** [INSERIR_LINK_DO_YOUTUBE_AQUI]
+* **Link para o YouTube:** https://www.youtube.com/watch?v=uGX5LUsspGc
 * **Apresentação:** Demonstração prática do atendimento automatizado via Telegram, orquestração multiagente em tempo real, Voice AI com transcrição de áudio via Azure Speech, motor de follow-up proativo e acompanhamento gerencial em Streamlit.
 
 ## 🛠️ Arquitetura do projeto
